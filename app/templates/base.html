@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>DWOLLABOT</title>
+  </head>
+  <body>
+    <div>Dwollabot 2.0 (Alpha): send money using SMS! <b> 1-904-DWLLA-07 </b> </div>
+    <div> <a href=""> Read more about Dwollabot here. </a></div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+        <li>{{ message }} </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
